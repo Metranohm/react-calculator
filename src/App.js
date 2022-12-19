@@ -13,6 +13,7 @@ export const ACTIONS = {
 }
 
 function reducer(state, { type, payload}) {
+  // eslint-disable-next-line default-case
   switch(type) {
     case ACTIONS.ADD_DIGIT:
       if (state.overwrite) {
@@ -123,6 +124,7 @@ function formatOperand(operand) {
   if (operand == null) return
   const [integer, decimal] = operand.split('.')
   if (decimal == null) return INTEGER_FORMATTER.format(integer)
+  return `${INTEGER_FORMATTER.format(integer)}.${decimal}`
 }
 
 function App() { 
