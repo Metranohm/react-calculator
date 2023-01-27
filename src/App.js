@@ -101,17 +101,17 @@ function evaluate({ currentOperand, previousOperand, operation}) {
   let computation = ""
   switch (operation) {
     case "+": 
-      computation = prev + current
-      break
+      computation = prev + current;
+      break;
     case "-":
-      computation = prev - current
-      break
+      computation = prev - current;
+      break;
       case "*": 
-      computation = prev + current
-      break
+      computation = prev * current;
+      break;
     case "÷":
-      computation = prev / current
-      break
+      computation = prev / current;
+      break;
   }
 
   return computation.toString()
